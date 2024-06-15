@@ -1,0 +1,137 @@
+.index-swiper{
+  height: 180px;
+}
+.index-swiper image{
+  height: 180px;
+  width: 100%;
+}
+
+
+.choose-container{
+  margin-top: 15px;
+ 
+}
+
+.index-text{
+  color: #38B0DE;
+  margin-left: 20px;
+  font-weight:normal;
+  position: relative; /* 使得 ::before 的定位相对于 .index-text */
+}
+.index-text::before {
+  content: "";
+  position: absolute;
+  left: -10px; /* 调整竖条距离文字的距离 */
+  top: 50%; /* 竖条在文字垂直居中 */
+  transform: translateY(-50%); /* 使竖条完全垂直居中 */
+  width: 3px; /* 竖条宽度 */
+  height: 20px; /* 竖条高度 */
+  background-color: #38B0DE; /* 竖条颜色 */
+  border-radius: 10rpx; /* 竖条圆角 */
+  content: "";
+}
+
+
+.tab-bar {
+  height: 60rpx;
+  white-space: nowrap; /* 防止换行 */
+  overflow-x: scroll; /* 横向滚动 */
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.upper{
+  display: flex;
+  height: 60rpx;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.tab {
+  display: inline-block;
+  padding: 10rpx;
+  color: #333;
+  cursor: pointer;
+  font-size: small;
+}
+
+.active {
+  color: #38B0DE;
+  font-weight: bold;
+}
+
+.card-list{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-list .card {
+	width: 90%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: flex-start;
+	background-color: #fff;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+	overflow: hidden;
+}
+
+.card-list .card .upper-content {
+	width: 100%;
+  margin-left: 60rpx;
+  margin-top: 40rpx;
+}
+
+
+.card-list .card .upper-content .title-txt {
+	font-size: 34rpx;
+	color: #000;
+	font-weight: bold;
+	flex: 1;
+}
+
+.card-list .card .upper-content .detail {
+	text-align: left;
+	font-size: 28rpx;
+	font-weight: bold;
+  padding: 20rpx 0;
+  color: #303030;
+}
+
+.card-list .card .upper-content .image-list{
+  margin-top: 20rpx;
+	display: flex;
+}
+
+.card-list .card .upper-content .image-list .image{
+  display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card-list .card .upper-content .image-list .image .display{
+  width: 80rpx;
+	height: 80rpx;
+}
+
+.card-list .card .upper-content .image-list .image .imgtext{
+  margin-top: 10rpx;
+  font-size: 24rpx;
+}
+
+.bottom-line {
+	margin-top: 20rpx;
+	font-size: 30rpx;
+	width: 100%;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	padding: 20rpx 0rpx;
+	color: #3879C2;
+	font-weight: bold;
+	letter-spacing: 3rpx;
+	background-image: linear-gradient(45deg, #F1F7FC, #D3E3F5);
+}
+

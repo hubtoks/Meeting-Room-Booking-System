@@ -1,0 +1,25 @@
+
+<van-calendar
+  title="会议日期选择"
+  poppable="{{ false }}"
+  show-confirm="{{ false }}"
+  bind:select="getDate"
+  color="#38B0DE"
+  row-height="32"
+  class="calendar"
+  wx:if="{{login_account}}"
+/>
+<view class="unlogin" bindtap="toIndex" wx:if="{{wx.getStorageSync('login_account') || !list.length}}">当前日期还未预约会议，点击去预约！</view>
+<view class="card-list" wx:if="{{login_account}}">
+  <view class="card" wx:for="{{list}}" wx:key="index">
+    <view class="upper-content" bindtap="toDetail">
+      <view class="title-txt">已预约{{item.address}}的{{item.title}}</view>
+      <view class="detail">预定时间为{{item.startTime}}到{{item.endTime}},请及时参会</view> 
+      <view class="desc" wx:if="{{item.desc}}">备注：{{item.desc}}</view> 
+    </view>
+    <view class="bottom-line" wx:if="{{item.state === 0}}">审核中</view>
+    <view class="bottom-line" wx:if="{{item.state === 1 || item.state === 4}}" bindtap="toCancel" data-info="{{item}}">取消预约</view>
+    <view class="bottom-line" wx:if="{{item.state === 2}}">预约失败</view>
+  </view>
+</view>
+<view class="unlogin"bindtap="toLogin" wx:else>点我登录使用此功能</view>

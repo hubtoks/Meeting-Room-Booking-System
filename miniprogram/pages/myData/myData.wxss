@@ -1,0 +1,38 @@
+.container {
+  padding-top: 20rpx;
+}
+
+.form-item {
+  height: 100rpx;
+  width: 95%;
+  display: flex;
+  background-color: #fff;
+  border-bottom:1rpx solid #f0f0f0;
+  border-radius: rpx;
+  align-items: center;
+}
+
+.form-item .form-left{
+  display: flex;
+  margin-left: 30rpx;
+}
+
+.form-item .form-left .label{
+  font-weight: bolder;
+}
+
+.form-item .form-left .required {
+  color: red;
+}
+
+.button-container {
+  margin-top: 30rpx;
+  text-align: center;
+  align-items: center;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+}

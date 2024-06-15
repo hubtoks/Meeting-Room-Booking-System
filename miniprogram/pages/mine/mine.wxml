@@ -1,0 +1,42 @@
+
+ 
+
+  <view class="login">
+    <view class="info">
+      <navigator class="infoNav" url="../mineDetail/mineDetail">
+        <image class="avatarUrl " src="{{avatarUrl}}" />
+        <text class="nickName" wx:if="{{!login}}">设置个人信息</text>
+        <text class="nickName" wx:else>{{nickName}}</text>
+      </navigator>
+    </view>
+    <view class="cell-list">
+      <view class="cell" wx:for="{{ cellList }}" wx:key="index" data-page="{{ item.page }}" bindtap="toDetail">
+        <view class="cell-left">
+          <image class="cell-image1" src="{{ item.url }}" />
+          <text class="cell-text">{{ item.text }}</text>
+        </view>
+        <view class="cell-right">
+          <image class="cell-image2" src="../../icon/arrow.png" />
+        </view>
+      </view>
+      <view class="cell" bindtap="toUnlogin" wx:if="{{login_account}}">
+        <view class="cell-left">
+          <image class="cell-image1" src="../../icon/logout.png" />
+          <text class="cell-text">退出登录</text>
+        </view>
+        <view class="cell-right">
+          <image class="cell-image2" src="../../icon/arrow.png" />
+        </view>
+      </view>
+      <view class="cell" bindtap="toLogin" wx:if="{{!login_account}}">
+        <view class="cell-left">
+          <image class="cell-image1" src="../../icon/login.png" />
+          <text class="cell-text">立即登录</text>
+        </view>
+        <view class="cell-right">
+          <image class="cell-image2" src="../../icon/arrow.png" />
+        </view>
+      </view>
+    </view>
+    
+  </view>

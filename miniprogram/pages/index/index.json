@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+     "MeetingRoom":"../../components/meetingroom/meetingroom"
+  },
+  "navigationBarTitleText": "会预约"
+}

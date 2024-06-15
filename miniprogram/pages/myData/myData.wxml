@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="form-item">
+    <view class="form-left">
+      <view class="required">*</view><view class="label">昵称：</view>
+    </view>
+      <input class="input" placeholder="请输入昵称" bindinput="inputNickname" value="{{nickName}}" />
+    
+  </view>
+  <view class="form-item">
+    <view class="form-left">
+      <view class="required">*</view><view class="label">手机：</view>
+    </view>
+      <input class="input" type="number" placeholder="请输入手机号" bindinput="inputPhone" value="{{phone}}" />
+    
+  </view>
+  <view class="form-item">
+    <view class="form-left">
+      <view class="label">所属部门：</view>
+    </view>
+      <input class="input" placeholder="请输入所属部门" bindinput="inputDepartment" value="{{department}}" />
+
+  </view>
+  <view class="button-container">
+    <button class="submit-button" bindtap="submitForm">修改资料</button>
+  </view>
+</view>

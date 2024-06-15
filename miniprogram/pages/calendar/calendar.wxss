@@ -1,0 +1,72 @@
+.calendar {
+  --calendar-height: 570rpx;
+}
+
+.card-list{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-list .card {
+	width: 90%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: flex-start;
+	background-color: #fff;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+	overflow: hidden;
+}
+
+.card-list .card .upper-content {
+	width: 100%;
+  margin-left: 60rpx;
+  margin-top: 40rpx;
+}
+
+
+.card-list .card .upper-content .title-txt {
+	font-size: 34rpx;
+	color: #000;
+	font-weight: bold;
+	flex: 1;
+}
+
+.card-list .card .upper-content .detail {
+	text-align: left;
+	font-size: 28rpx;
+	font-weight: bold;
+  padding: 20rpx 0;
+  color: #303030;
+}
+
+.card-list .card .upper-content .desc {
+  color: #666;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.bottom-line {
+	margin-top: 20rpx;
+	font-size: 30rpx;
+	width: 100%;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	padding: 20rpx 0rpx;
+	color: #3879C2;
+	font-weight: bold;
+	letter-spacing: 3rpx;
+  background-image: linear-gradient(45deg, #F1F7FC, #D3E3F5);
+ 
+}
+
+
+.unlogin{
+  margin-top: 80rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

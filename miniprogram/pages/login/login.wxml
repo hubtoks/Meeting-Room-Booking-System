@@ -1,0 +1,14 @@
+
+<view class="body">
+  <view class="input-body">
+    <text class="account">账号</text>
+    <input class="input" type="text" placeholder="请输入用户名" bindinput="getUsername"/>
+    <text class="account">密码</text>
+    <input class="input" type="password" placeholder="请输入密码" bindinput="getPassword"/>
+    <text class="toreg" bindtap="toReg">去注册</text>
+    <button class="login-btn" bindtap="submit">登录</button>
+  </view>
+    
+    
+  
+</view>

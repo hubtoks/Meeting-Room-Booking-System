@@ -1,0 +1,50 @@
+<view class="body">
+  <swiper class="swiper-container" vertical autoplay interval="5000" circular>
+  <block wx:for="{{news}}" wx:key="index">
+    <swiper-item>
+      <view class="notice-item">{{item}}</view>
+    </swiper-item>
+  </block>
+  </swiper>
+
+  <view class="timeSelect">
+  <text class="index-text">时间预约</text>
+    <view class="section">
+      <view class="section__title">请选择会议日期:</view>
+      <picker mode="date" value="{{meetingDate}}" start="{{nowDate}}" end="9999-12-31" bindchange="bindMeetingDateChange">
+        <view class="picker">{{meetingDate}}</view>
+      </picker>
+      
+    </view>
+    <view class="section">
+      <view class="section_title">请选择会议开始时间:</view>
+      <picker mode="time" value="{{startTime}}" start="{{nowTime}}" end="21:30" bindchange="bindStartTimeChange">
+      <view class="picker">{{startTime}}</view>
+      </picker>
+    </view>
+    <view class="section">
+      <view class="section_title">请选择会议结束时间:</view>
+      <picker mode="time" value="{{endTime}}" start="{{startTime}}" end="22:00" bindchange="bindEndTimeChange">
+        <view class="picker">{{endTime}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class="info-input">
+  <text class="index-text">预约人信息</text>
+  <input value="{{ name }}" class="info" placeholder="请输入预订人昵称" type="text" bindinput="getName"/>
+  <input value="{{ phone }}" class="info" placeholder="请输入预订人联系方式" type="text" bindinput="getPhone" maxlength="11"/>
+  </view>
+  <view class="section">
+  <view class="section_title">请选择会议优先级:</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">{{array[index]}}</view>
+  </picker>
+</view>
+  <view class="bottom-line" bindtap="Reserve">立即预约</view>
+</view>
+
+
+
+
+
+

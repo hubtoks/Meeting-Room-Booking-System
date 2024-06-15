@@ -1,0 +1,11 @@
+<view class="meeting-room" hover-class="meeting-room-hover" bindtap="onTapReserve">
+  <view class="image-container">
+    <image class="image1" src="{{imageSrc}}" mode="aspectFill"></image>
+  </view>
+  <view class="text-container">
+    <text class="text">{{roomName}}</text>
+    <button class="orange" size="mini">
+      <text class="reserve-text">点击预约</text>
+    </button>
+  </view>
+</view>

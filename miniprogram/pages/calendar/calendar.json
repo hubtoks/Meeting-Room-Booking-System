@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-calendar": "@vant/weapp/calendar/index"
+  },
+  "navigationBarTitleText": "会议日历"
+}

@@ -1,0 +1,68 @@
+
+
+
+.info{
+  background-color: #38B0DE;
+  display: flex;
+  flex-direction: column;
+  padding: 100rpx 0;
+}
+
+.info .infoNav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info .avatarUrl{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+
+.info .nickName{
+  color: #fff;
+  margin-top: 30rpx;
+  
+}
+
+.cell-list{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -20rpx;
+}
+
+.cell{
+  background-color: #fff;
+  display:flex;
+  height: 50rpx;
+  justify-content: space-between;  /* 顶到左右的顶 */
+  align-items: center;
+  padding: 30rpx 20rpx;
+  width:85%;
+  margin-bottom: 20rpx;
+  border-radius: 15rpx;
+}
+
+.cell .cell-left{
+  display:flex;
+  width: 90%;
+  align-items: center;
+}
+
+.cell .cell-left .cell-image1{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 20rpx;
+}
+
+.cell .cell-left .cell-text{
+  margin:20rpx;
+}
+
+.cell .cell-right .cell-image2{
+  width: 30rpx;
+  height: 30rpx;
+}
+

@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/mine/mine",
+    "pages/mineDetail/mineDetail",
+    "pages/inform/inform",
+    "pages/reserve/reserve",
+    "pages/reserveDetail/reserveDetail",
+    "pages/myCollection/myCollection",
+    "pages/myData/myData",
+    "pages/detail/detail",
+    "pages/Search/Search",
+    "pages/calendar/calendar",
+    "pages/login/login",
+    "pages/register/register"
+  ],
+  "window": {
+    "homeButton": true,
+    "enablePullDownRefresh": true,
+    "navigationBarBackgroundColor": "#38B0DE",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "会预约",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "38B0DE",
+    "backgroundColor": "#f5f5f5",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/icon/index.png",
+        "selectedIconPath": "/icon/index1.png"
+      },
+      {
+        "pagePath": "pages/calendar/calendar",
+        "text": "会议日历",
+        "iconPath": "/icon/meeting.png",
+        "selectedIconPath": "/icon/meeting1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/icon/mine.png",
+        "selectedIconPath": "/icon/mine1.png"
+      }
+    ]
+  },
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index"
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

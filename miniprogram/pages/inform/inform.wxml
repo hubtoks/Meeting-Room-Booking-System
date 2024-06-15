@@ -1,0 +1,18 @@
+<view class="unlogin" wx:if="{{wx.getStorageSync('login_account') || !list.length}}">当前暂无通知</view>
+<view class="card-list" wx:if="{{login_account}}">
+  <view class="card" wx:for="{{list}}" wx:key="index">
+    <view class="upper-content" bindtap="toCalendar">
+      <view class="title-txt">{{item.address}}的{{item.title}}</view>
+      <view class="detail">原预定时间为 {{item.meetingDate}}从 {{item.startTime}} 到 {{item.endTime}} </view> 
+      
+      <view class="detail2" wx:if="{{item.newMeetingDate}}">现预定时间为 {{item.newMeetingDate}}从 {{item.newStartTime}} 到 {{item.newEndTime}}</view> 
+      <view class="desc" wx:if="{{item.desc}}">备注：{{item.desc}}</view> 
+    </view>
+    <view class="bottom-line" wx:if="{{item.state === 4}}" bindtap="toCancel" data-info="{{item}}">调度完成</view>
+    <view class="bottom-line" wx:if="{{item.state === 3}}">调度中</view>
+    
+  </view>
+  
+</view>
+
+<view class="unlogin"bindtap="toLogin" wx:if="{{!login_account}}">点我登录使用此功能</view>

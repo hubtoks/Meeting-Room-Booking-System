@@ -1,0 +1,53 @@
+<view class="body">
+  <view wx:for="{{list}}" wx:key="index">
+    <view class="upper">
+      <view class="image">
+        <image class="top-image" src="../../image/1.jpg" />
+      </view>
+      <view class="text-list">
+      <text class="title">{{item.title}}</text>
+      <text class="reserve" bindtap="toReserveDetail">查看预约详情</text>
+      </view>
+    </view>
+    <view class="middle"> 
+      <text class="detail-text">服务详情</text>
+      <view class="detail-main">
+          <view class="middle-detail">
+            <text class="detail">具体地址</text>
+            <text >{{item.addressDetail}}</text>
+          </view>
+          <view class="middle-detail">
+            <text class="detail">联系方式</text>
+            <text >{{item.phone}}</text>
+          </view>
+          <view class="middle-detail">
+            <text class="detail">商家备注</text>
+            <text >{{item.desc}}</text>
+          </view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="btm-left" bindtap="toGetphone">
+      <image class="btm-img" src="../../icon/telephone.png"/>
+      <text class="btm-txt">点击联系我</text>
+    </view>
+    <view class="btm-right" bindtap="toReserve">
+      <view class="reserver-btn"><text class="btn-txt">点击预约</text></view>
+    </view>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+  
+

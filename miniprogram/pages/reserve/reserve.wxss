@@ -1,0 +1,83 @@
+.swiper-container{
+  height: 100rpx;
+}
+.notice-item {
+  height: 100rpx; /* 设置每个通知内容的高度 */
+  line-height: 100rpx; /* 设置垂直居中 */
+  text-align: center;
+  background-color: #f0f0f0; /* 设置通知内容背景颜色 */
+  margin-bottom: 10rpx; /* 设置通知内容之间的间距 */
+}
+
+.index-text{
+  color: #38B0DE;
+  margin-left: 20px;
+  font-weight:bolder;
+  position: relative; /* 使得 ::before 的定位相对于 .index-text */
+}
+.index-text::before {
+  content: "";
+  position: absolute;
+  left: -10px; /* 调整竖条距离文字的距离 */
+  top: 50%; /* 竖条在文字垂直居中 */
+  transform: translateY(-50%); /* 使竖条完全垂直居中 */
+  width: 3px; /* 竖条宽度 */
+  height: 20px; /* 竖条高度 */
+  background-color: #38B0DE; /* 竖条颜色 */
+  border-radius: 10rpx; /* 竖条圆角 */
+  content: "";
+}
+
+
+
+.timeSelect{
+  border-bottom: 2rpx solid #aaa;
+  padding-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+
+.section{
+  display:flex;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+}
+
+.picker{
+  border: 2rpx solid #aaa;
+  padding: 5rpx 10rpx;
+  margin-left: 20rpx;
+  border-radius: 15rpx;
+  box-sizing: border-box;
+}
+
+.info-input{
+  margin-top: 20rpx;
+  border-bottom: 2rpx solid #aaa;
+}
+
+.info-input .info{
+  margin-bottom: 40rpx;
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+}
+
+.desc{
+  padding: 30rpx 40rpx;
+  
+}
+
+.bottom-line {
+  position: absolute;
+	bottom: 0;
+	font-size: 30rpx;
+	width: 100%;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	padding: 20rpx 0rpx;
+	color: #3879C2;
+	font-weight: bold;
+	letter-spacing: 3rpx;
+	background-image: linear-gradient(45deg, #F1F7FC, #D3E3F5);
+}

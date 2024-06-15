@@ -1,0 +1,46 @@
+.meeting-room {
+  display: flex;
+  margin-bottom: 10rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.image-container {
+  width: 65%; /* 调整图片占比，可以根据实际需要调整 */
+  padding-right: 10rpx;
+}
+
+.image1 {
+  width: 100%;
+  height: 300rpx;
+  border-radius: 10rpx;
+  margin-left: 10rpx;
+}
+
+.text-container {
+  width: 35%; /* 调整文字占比，以保持布局平衡 */
+  box-sizing: border-box;
+  padding-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.orange{
+  margin-top: 80px;
+  border-radius: 30rpx;
+  background-color:  #38B0DE;
+}
+
+.reserve-text{
+  color: #ffffff;
+  font-weight: lighter;
+}
+
+.meeting-room-hover {
+  background-color: #eeeeee; /* 设置点击效果时的背景颜色 */
+}

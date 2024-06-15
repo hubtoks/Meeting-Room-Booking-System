@@ -1,0 +1,38 @@
+.body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50rpx;
+  width: 90%;
+}
+.input-body .account{
+  margin-right: auto;
+  font-weight: bolder;
+  margin-bottom: 40rpx;
+}
+.input-body .input{
+  width: 100%;
+  border-bottom: 2rpx solid #ccc;
+  padding-bottom: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.input-body .toreg{
+  margin-right: auto;
+  color: rgb(33, 120, 190);
+  margin-top: -20rpx;
+}
+
+.input-body .login-btn{
+  width: 90%;
+  margin-top: 40rpx;
+  border-radius: 20rpx;
+  background-color: #38B0DE;
+  color: white;
+}

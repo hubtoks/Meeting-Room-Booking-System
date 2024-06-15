@@ -1,0 +1,22 @@
+<!--pages/Search/Search.wxml-->
+<view class="body">
+  <view class="search">
+    <image class="search-icon" src="../../icon/search.png"/>
+    <input value="{{text}}" class="search-input" type="text" placeholder="搜索" bindinput="getSearch" />
+    <image wx:if="{{text.length > 0}}" class="close-icon" src="../../icon/close.png" bindtap="deleteSearch"/>
+  </view>
+  <view class="empty-search" wx:if="{{search.length === 0}}">
+    <view class="search-log">
+      <text>搜索历史</text>
+      <image class="delete" src="../../icon/delete.png" bindtap="deleteLog"/>
+    </view>
+    <view class="log-list">
+      <view class="log-item" wx:for="{{ searchLog }}" wx:key="index">{{item}}</view>
+    </view>
+  </view>
+  <view class="result-search" wx:else>
+    <view class="search-item" wx:for="{{ searchRes }}" wx:key="index" bindtap="toDetail" data-title="{{ item.title }}">
+      <text>{{ item.title }}</text>
+    </view>
+  </view>
+</view>

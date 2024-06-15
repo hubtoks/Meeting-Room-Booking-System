@@ -1,0 +1,57 @@
+
+
+<!-- 自动轮播图片 -->
+<swiper class="index-swiper" circular="true" autoplay interval="5000">
+  <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+          <image class="index-swiper image" src="{{item}}"/>
+      </swiper-item>
+  </block>
+</swiper>
+
+
+
+<view class="choose-container">
+  <text class="index-text">场地选择</text>
+  <view class="upper">
+    <view class="{{select == index ? 'active' : 'tab'}}" wx:for="{{siteOptions}}" wx:key="index" bindtap="selectTab" data-id="{{index}}">
+      {{item}}
+    </view>
+  </view>  
+</view>
+
+<view class="card-list">
+  <view class="card" wx:for="{{list}}" wx:key="index" >
+    <view class="upper-content" bindtap="toDetail" data-title="{{ item.title }}">
+      <view class="title-txt">{{item.title}}</view>
+      <view class="detail">可容纳{{item.capacity}}人，距离您{{item.distance}}</view> 
+      <view class="image-list">
+        <view class="image">
+          <block class="image-display" wx:if="{{item.hasW}}">
+            <image class="display" src="../../image/meet/2.png"/>
+            <text class="imgtext">白板</text>
+          </block>
+          <block class="image-display" wx:if="{{item.hasP}}">
+            <image class="display" src="../../image/meet/1.png" mode="aspectFill"/>
+            <text class="imgtext">投影仪</text>
+          </block>
+          <block class="image-display" wx:if="{{item.hasS}}">
+            <image class="display" src="../../image/meet/4.png"/>
+            <text class="imgtext">话筒</text>
+          </block>
+          <block class="image-display" wx:if="{{item.hasM}}">
+            <image class="display" src="../../image/meet/3.png"/>
+            <text class="imgtext">音箱</text>
+          </block>
+         
+        </view>
+      </view>
+    </view>
+    <view class="bottom-line" bindtap="toReserveDetail" data-title="{{ item.title }}" >查看预约详情</view>
+  </view>
+</view>
+
+
+
+
+

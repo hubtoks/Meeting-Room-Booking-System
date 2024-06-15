@@ -1,0 +1,24 @@
+<van-calendar
+  show-title="{{ false }}"
+  show-subtitle="{{ false }}"
+  poppable="{{ false }}"
+  show-confirm="{{ false }}"
+  show-mark="{{ false }}"
+  class="calendar"
+  row-height="32"
+  bind:select="getDate"
+  color="#38B0DE"
+  first-day-of-week="{{ defaultDay }}"
+/>
+<view class="noList" wx:if="{{!list.length}}">该会议室暂无预约信息！</view>
+<view class="cellGroup">
+  <van-cell-group inset wx:for="{{list}}" wx:key="index">
+    <van-cell center 
+    title="{{item.startTime}}-{{item.endTime}}" 
+    value="优先:{{item.priority}}" 
+    value-class="{{item.priority === 'Low' ? 'value-class-low' : item.priority === 'Medium' ? 'value-class-medium' : item.priority === 'High' ? 'value-class-high' : 'value-class-critical'}}" 
+    label="预约人:{{item.name}}"/> 
+  </van-cell-group>
+  <view class="bottom-line" bindtap="toReserve">立即预约</view>
+</view>
+

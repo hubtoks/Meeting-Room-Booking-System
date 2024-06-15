@@ -1,0 +1,16 @@
+<view class="body">
+  
+    <view class="card">
+    <text class="text">头像</text>
+    <image class="avatar" src="{{avatarUrl}}"></image>
+  </view>
+  
+  <view class="card">
+    <text class="text">昵称</text>
+    <input class="weui-input" placeholder="请输入昵称" bindinput="getNickname" value="{{nickName}}" maxlength="5" />
+  </view>
+  <button class="btn" style="width: 400px; height: 60px;" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar"></button>
+  <view class="button-container">
+    <button class="submit-button" bindtap="submit">保存修改</button>
+  </view>
+</view>

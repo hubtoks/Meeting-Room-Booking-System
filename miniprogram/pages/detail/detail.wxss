@@ -1,0 +1,139 @@
+.body{
+  background-color: #fff;
+  padding-bottom: 100rpx;
+  
+}
+
+.upper {
+ background-color: #fff;
+ border-bottom:20rpx solid #eee ;
+}
+
+.upper .image {
+  height: 400rpx;
+  width: 690rpx;
+  padding: 30rpx; /* 设置容器的内边距，这里使用了 rpx 作为单位 */
+}
+
+.upper .top-image {
+    width: 100%;
+    height: 100%; 
+}
+
+.upper .text-list{
+  display:flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+  }
+
+.upper .text-list .title{
+  margin-bottom: 20rpx;
+}
+
+.upper .text-list .reserve{
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+  color: #38B0DE;
+}
+
+.middle{
+  margin-top: 10px;
+  background-color: #fff;
+  height: 400rpx;
+}
+
+
+.middle .detail-text{
+  color: #38B0DE;
+  margin-left: 25px;
+  font-weight:normal;
+  position: relative; /* 使得 ::before 的定位相对于 .index-text */
+}
+.middle .detail-text::before {
+  content: "";
+  position: absolute;
+  left: -10px; /* 调整竖条距离文字的距离 */
+  top: 50%; /* 竖条在文字垂直居中 */
+  transform: translateY(-50%); /* 使竖条完全垂直居中 */
+  width: 3px; /* 竖条宽度 */
+  height: 20px; /* 竖条高度 */
+  background-color: #38B0DE; /* 竖条颜色 */
+  border-radius: 10rpx; /* 竖条圆角 */
+  content: "";
+}
+
+.middle .detail-main{
+  margin-top: 20rpx;
+}
+
+.middle .detail-main .middle-detail{
+  padding: 10rpx;
+  display: flex;
+  align-items: center;
+  border-top: #eee 2rpx solid;
+  box-sizing: box;
+}
+
+.middle .detail-main .middle-detail .detail{
+  width: 70rpx;
+  font-size: 24rpx;
+  color: #999;
+  margin-right: 15rpx;
+  margin-left: 20rpx;
+}
+
+
+
+.bottom{
+  display: flex;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 20rpx 40rpx;
+  position:absolute;
+  width: 100%;
+  bottom: 0;
+  height: 75rpx;
+}
+
+.bottom .btm-left{
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+  border-radius: 30rpx;
+  padding: 10rpx;
+  width: 60%;
+}
+
+.bottom .btm-left .btm-img{
+width: 40rpx;
+height: 40rpx;
+margin-left: 20rpx;
+margin-right: 10rpx;
+}
+
+.bottom .btm-left .btm-txt{
+color: #999;
+font-size: 24rpx;
+}
+
+.bottom .btm-right{
+  display:flex;
+  width: 30%;
+
+}
+
+.bottom .btm-right .reserver-btn{
+  width: 90%;
+  border-radius: 20rpx;
+  background-color: #38B0DE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20rpx;
+}
+
+.bottom .btm-right .reserver-btn .btn-txt{
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+}
